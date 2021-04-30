@@ -8,9 +8,8 @@ Description:
 
 Requirements:
 
-- wheel
+- wheel (included in HEROKU)
 - "apache-airflow[postgres,password]"
--
 
 ### Set-Up Instructions
 
