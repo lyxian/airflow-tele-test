@@ -27,7 +27,6 @@ dag = DAG(
     default_args=default_args,
     schedule_interval='@hourly',
     catchup=False,
-    xcom_push=True,
 )
 
 t1 = PythonOperator(
