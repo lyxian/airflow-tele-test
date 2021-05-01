@@ -2,12 +2,13 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from Py.main import getDateNow, test
+from Py.main import getDateNow, start
 from datetime import timedelta
 
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
+from airflow.providers.http.operators.http import SimpleHttpOperator
 
 default_args = {
     'owner': 'Lyx',
@@ -24,21 +25,17 @@ default_args = {
 dag = DAG(
     dag_id='start_carousell',
     default_args=default_args,
-    schedule_interval='* */1 * * *',
+    schedule_interval='@hourly',
+    catchup=False,
+    xcom_push=True,
 )
 
 t1 = PythonOperator(
     task_id='start',
-    python_callable=test,
+    python_callable=start,
     dag=dag,
     #op_args=,
     #op_kwargs=kwargs,
 )
 
-t2 = BashOperator(
-    task_id='end',
-    bash_command='echo "--END--"',
-    dag=dag,
-)
-
-t1 >> t2
+t1

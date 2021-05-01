@@ -17,5 +17,10 @@ def test():
     print('Printing...')
     return 'Returning...'
     
+def start():
+    domain = 'https://yxian-carousell.herokuapp.com/start'
+    requests.get(url=domain)
+    return 'Success...'
+
 if __name__ == '__main__':
     print(getDateNow())
