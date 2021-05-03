@@ -34,9 +34,11 @@ def live():
         logging.warning('This is a warning message')
         logging.error('This is an error message')
         logging.critical('This is a critical message')
-        
-        domain = 'https://yxian-carousell.herokuapp.com/'
-        requests.get(url=domain)
+
+        if datetime.now().minute >= 55: 
+            domain = 'https://yxian-carousell.herokuapp.com/'
+            response = requests.get(url=domain)
+            logging.info(f'Received {response.status_code} response...')
 
         return 'Success...'
     except:
