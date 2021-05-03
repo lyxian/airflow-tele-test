@@ -27,16 +27,20 @@ def start():
 def live():
     try:
         msg = f'Logging at {datetime.now()}...'
-        print('Printing: ', msg)
         logging.info(msg)
+
+        logging.debug('This is a debug message')
+        logging.info('This is an info message')
+        logging.warning('This is a warning message')
+        logging.error('This is an error message')
+        logging.critical('This is a critical message')
+        
+        domain = 'https://yxian-carousell.herokuapp.com/'
+        requests.get(url=domain)
+
         return 'Success...'
     except:
-        return 'Failed...'
-    logging.debug('This is a debug message')
-    logging.info('This is an info message')
-    logging.warning('This is a warning message')
-    logging.error('This is an error message')
-    logging.critical('This is a critical message')
+            return 'Failed...'
 
 
 if __name__ == '__main__':

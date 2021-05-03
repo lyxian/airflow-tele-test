@@ -11,6 +11,11 @@ Requirements:
 - wheel (included in HEROKU)
 - "apache-airflow[postgres,password]"
 
+### Heroku Configs
+
+- login heroku
+- run .scripts/heroku/setConfig
+
 ### Set-Up Instructions
 
 - web: airflow db init
