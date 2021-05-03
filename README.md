@@ -15,3 +15,8 @@ Requirements:
 
 - web: airflow db init
 - web: airflow webserver --port $PORT --daemon & airflow scheduler
+
+### TO-DO
+
+- create init_user script
+- add python script to send request to webserver
