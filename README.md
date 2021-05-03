@@ -4,7 +4,10 @@ Current Build: v0
 
 Description:
 
-- xx
+Version:
+
+- v0 - call Carousell DAG
+- v1 - call DAG to keep awake
 
 Requirements:
 
