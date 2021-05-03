@@ -21,7 +21,7 @@ default_args = {
 }
 
 dag = DAG(
-    dag_id='start_carousell',
+    dag_id='stay_awake',
     default_args=default_args,
     schedule_interval='*/10 * * * *',
     catchup=False,
