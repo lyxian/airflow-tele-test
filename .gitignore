@@ -1,8 +1,6 @@
 # Ignore files for commit
-.scripts
-.config
 .venv
-__init__.py
+.config
 __pycache__
 
 

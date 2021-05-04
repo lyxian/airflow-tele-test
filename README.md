@@ -4,12 +4,20 @@ Current Build: v0
 
 Description:
 
-- xx
+Version:
+
+- v0 - call Carousell DAG
+- v1 - call DAG to keep awake
 
 Requirements:
 
 - wheel (included in HEROKU)
 - "apache-airflow[postgres,password]"
+
+### Heroku Configs
+
+- login heroku
+- run .scripts/heroku/setConfig
 
 ### Set-Up Instructions
 
