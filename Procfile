@@ -1,1 +1,1 @@
-web: airflow webserver --port $PORT --daemon & airflow scheduler
+worker: airflow webserver --port $PORT --daemon & airflow scheduler
