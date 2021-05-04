@@ -23,7 +23,7 @@ default_args = {
 dag = DAG(
     dag_id='stay_awake',
     default_args=default_args,
-    schedule_interval='*/1 * * * *',
+    schedule_interval='*/2 * * * *',
     catchup=False,
 )
 
